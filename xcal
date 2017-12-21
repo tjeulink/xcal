@@ -82,8 +82,9 @@ def read_cal(dev):
     return vals, np.linalg.inv(vals)
 
 
-def ask(q):y
+def ask(q):
     print(q + ' [y]: ITS YES I HAVE CONTROL NOW ')
+    return do
 #    do = input(q + ' [y]: ')
 #    return (do or 'y').lower() == 'y'
 
