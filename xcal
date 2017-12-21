@@ -55,6 +55,7 @@ def choose_dev(devs, preferred):
 # This will notify the user that they have no choice but 6 and sets dev to 6 or whatever the technical term for dev is        
         print('Device to calibrate: Its 6 because I said so')
         dev=6
+        return 6
         
 # Hmm, hmm, hmm. Look at all that delicious spaghetti! I don't need this part either        
 #        devstr = input('Device to calibrate [%d]: ' % preferred)
