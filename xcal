@@ -23,37 +23,45 @@ def get_devs():
     if not devs:
         print('No suitable input devices found')
         exit(1)
+# This is meant to only allow passing when the correct touchscreen chipset is detected. Does it work? Your guess is ~~as good as~~ probably better than mine.     
+    if not 'ADS7846' in n.lower()
+        print('This device does not have the correct touchscreen for this script attached, or I fucked up coding this.')
     return devs
 
+# Commented out because its not needed, keeping it around to give the script that authentic spaghetti code feel (and for refference).
+#def print_devs(devs):
+#    print('Pointer devices:')
+#    print('%4s %35s' % ('ID', 'Name'))
+#    for i, name in sorted(devs.items()):
+#        print('%4d %35s' % (i, name))
+#    print()
 
-def print_devs(devs):
-    print('Pointer devices:')
-    print('%4s %35s' % ('ID', 'Name'))
-    for i, name in sorted(devs.items()):
-        print('%4d %35s' % (i, name))
-    print()
 
-
-def choose_preferred(devs):
-    preferred = [i for (i, n) in devs.items() if 'touch' in n.lower()]
-    if preferred:
-        return preferred[0]
-    return next(iter(devs.keys()))
+#def choose_preferred(devs):
+#    preferred = [i for (i, n) in devs.items() if 'touch' in n.lower()]
+#    if preferred:
+#        return preferred[0]
+#    return next(iter(devs.keys()))
 
 
 def choose_dev(devs, preferred):
     while True:
-        devstr = input('Device to calibrate [%d]: ' % preferred)
-        if not devstr:
-            return preferred
-        try:
-            dev = int(devstr)
-        except ValueError:
-            continue
-        if dev in devs.keys():
-            return dev
+# This will notify the user that they have no choice but 6 and sets dev to 6 or whatever the technical term for dev is        
+        print('Device to calibrate: its 6 because I said so')
+        dev=6
+        
+# Hmm, hmm, hmm. Look at all that delicious spaghetti! I don't need this part either        
+#        devstr = input('Device to calibrate [%d]: ' % preferred)
+#        if not devstr:
+#            return preferred
+#        try:
+#            dev = int(devstr)
+#        except ValueError:
+#            continue
+#        if dev in devs.keys():
+#            return dev
 
-
+# No idea what this does so im keeping it for safety 'n fun
 def read_cal(dev):
     stdout = xinput('--list-props', str(dev))
     line = re.search(prop_name + r'.*:\s+(\S.+)', stdout)
@@ -68,26 +76,32 @@ def read_cal(dev):
     return vals, np.linalg.inv(vals)
 
 
-def ask(q):
-    do = input(q + ' [y]: ')
-    return (do or 'y').lower() == 'y'
+def ask(q):y
+    print(q + ' [y]: ITS YES I HAVE CONTROL NOW ')
+#    do = input(q + ' [y]: ')
+#    return (do or 'y').lower() == 'y'
 
 
 def choose_points():
-    p_min, default = 3, 4
 
-    while True:
-        p_str = input('Point count (min %d) [%d]: ' %
-                      (p_min, default))
-        if not p_str:
-            return default
-        try:
-            p = int(p_str)
-        except ValueError:
-            continue
-
-        if p >= p_min:
-            return p
+# This notifies the user that I, again, chose for them and sets p_str to 8.        
+        print('Point count: Yea not gonna let you choose this either, its 8 because this touchscreen is inaccurate')
+        p_str = 8
+        
+# Mama would be proud of my spaghetti with a touch of legacy code       
+#    p_min, default = 3, 4
+#    while True:
+#        p_str = input('Point count (min %d) [%d]: ' %
+#                      (p_min, default))
+#        if not p_str:
+#            return default
+#        try:
+#            p = int(p_str)
+#        except ValueError:
+#            continue
+#
+#        if p >= p_min:
+#            return p
 
 
 def transform(x, y, cal):
@@ -123,7 +137,7 @@ def show_tk(n_points, old_cal_inv, new_cal=None):
     def draw_legends():
         nonlocal legend_y
         legend_y = Y * 0.3
-        legend('Esc to cancel.')
+        legend('Esc to cancel. haha just kidding, there is no escape from this.')
         legend('Raw point in black')
         legend('Old cal point in blue', '#00F')
         legend('Target point in red', '#F00')
@@ -205,7 +219,7 @@ def fit(screen_pts, mouse_pts):
     m_screen = np.matrix([[*p, 1] for p in screen_pts])
     m_mouse = np.matrix([[*p, 1] for p in mouse_pts])
     m_transform, residuals, rank, singular = np.linalg.lstsq(m_mouse, m_screen)
-    quality = -log10(residuals.sum())
+    ity = -log10(residuals.sum())
     return m_transform, quality
 
 
@@ -270,7 +284,7 @@ def main():
 
             print('New calibration:')
             print(new_cal)
-            print('Quality (should be at least 3): %.1f' % quality)
+            print('Quality (should be at least 3, but these screens are shit so anything flies): %.1f' % quality)
             print()
 
     if ask('Test?'):
