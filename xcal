@@ -23,10 +23,13 @@ def get_devs():
     if not devs:
         print('No suitable input devices found')
         exit(1)
-# This is meant to only allow passing when the correct touchscreen chipset is detected. Does it work? Your guess is ~~as good as~~ probably better than mine.     
-    if not 'ADS7846' in n.lower()
-        print('This device does not have the correct touchscreen for this script attached, or I fucked up coding this.')
     return devs
+# This is meant to only allow passing when the correct touchscreen chipset is detected. Does it work? Your guess is ~~as good as~~ probably better than mine.     
+    
+# Never mind this part doesn't work so its the sause on the spaghetti now    
+#    if not 'ADS7846' in n.lower()
+#        print('This device does not have the correct touchscreen for this script attached, or I fucked up coding this.')
+
 
 # Commented out because its not needed, keeping it around to give the script that authentic spaghetti code feel (and for refference).
 #def print_devs(devs):
