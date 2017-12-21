@@ -317,6 +317,6 @@ def main():
         show_tk(n_points, old_cal_inv, new_cal)
 
 #    if new_cal is not None and ask('Use calibration?'):
-        use_cal(dev, new_cal)
+    use_cal(dev, new_cal)
 
 main()
