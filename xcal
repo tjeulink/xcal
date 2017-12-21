@@ -87,7 +87,7 @@ def read_cal(dev):
 def ask(q):
     print(q + ' [y]: ITS YES I HAVE CONTROL NOW ')
     time.sleep( 5 )
-    return do
+    return true
 #    do = input(q + ' [y]: ')
 #    return (do or 'y').lower() == 'y'
 
