@@ -6,6 +6,7 @@ import re
 import numpy as np
 from subprocess import run, PIPE
 
+import time
 
 prop_name = 'libinput Calibration Matrix'
 
@@ -85,7 +86,7 @@ def read_cal(dev):
 
 def ask(q):
     print(q + ' [y]: ITS YES I HAVE CONTROL NOW ')
-    sleep( 5 )
+    time.sleep( 5 )
     return y
 #    do = input(q + ' [y]: ')
 #    return (do or 'y').lower() == 'y'
