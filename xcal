@@ -43,11 +43,14 @@ def get_devs():
 #        return preferred[0]
 #    return next(iter(devs.keys()))
 
+# Its always preferred 6, not that the user has a choice or anything but it keeps this from breaking.
+def choose_preferred(devs):
+    preferred = 6
 
 def choose_dev(devs, preferred):
     while True:
 # This will notify the user that they have no choice but 6 and sets dev to 6 or whatever the technical term for dev is        
-        print('Device to calibrate: its 6 because I said so')
+        print('Device to calibrate: Its 6 because I said so')
         dev=6
         
 # Hmm, hmm, hmm. Look at all that delicious spaghetti! I don't need this part either        
@@ -265,7 +268,7 @@ def use_cal(dev, new_cal):
 
 def main():
     devs = get_devs()
-    print_devs(devs)
+#    print_devs(devs)
     preferred = choose_preferred(devs)
     dev = choose_dev(devs, preferred)
     print()
