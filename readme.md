@@ -13,7 +13,12 @@ xinput_calibrator:
 
 Why was this forked from master?:
 
-I forked it for a very very specific use, to simplify calibration for the KeDei touchscreen i have for my raspberry pi. 
+I forked it for a very very specific use, to remove text input requirements from the calibration process for the KeDei touchscreen i have for my raspberry pi.
+
+
+Why would you want to remove text input requirements?:
+
+Because now I can calibrate without having a keyboard attached, easier for non permanent setups and debugging.
 
 
 Which speciffic touchscreen is this calibrated for?:
