@@ -13,22 +13,22 @@ xinput_calibrator:
 
 Why was this forked from master?:
 
-I forked it for a very very specific use, to remove text input requirements from the calibration process for the KeDei touchscreen i have for my raspberry pi.
+    I forked it for a very very specific use, to remove text input requirements from the calibration process for the KeDei touchscreen i have for my raspberry pi.
 
 
 Why would you want to remove text input requirements?:
 
-Because now I can calibrate without having a keyboard attached, easier for non permanent setups and debugging.
+    Because now I can calibrate without having a keyboard attached, easier for non permanent setups and debugging.
 
 
 Which speciffic touchscreen is this calibrated for?:
 
-This was adapted for the KeDei Raspberry pi Display 3.5 inch HDMILCD 18bit version 1.1 2017/9/9 with a resolution of 480 by 320. It will probably work with other resolutions too but not sure. The touchscreen chipset i tested this on is the XPT2046
+    This was adapted for the KeDei Raspberry pi Display 3.5 inch HDMILCD 18bit version 1.1 2017/9/9 with a resolution of 480 by 320. It will probably work with other resolutions too but not sure. The touchscreen chipset i tested this on is the XPT2046
 
 
 Whats different from the master?:
 
-The original xcal is designed for versitility(i assume), this one is adapted for the slightly braindead like me trying to calibrate this specific touchscreen with ease. The biggest difference between master and this is that the master was written by someone who knew what they where doing, this fork was not.
+    he original xcal is designed for versitility(i assume), this one is adapted for the slightly braindead like me trying to calibrate this specific touchscreen with ease. The biggest difference between master and this is that the master was written by someone who knew what they where doing, this fork was not.
 
 
 Everything below this is untouched from master, it may or may not be correct so pull conclusions at own caution.
