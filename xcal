@@ -96,6 +96,7 @@ def choose_points():
 
 # This notifies the user that I, again, chose for them and sets p_str to 8.        
     print('Point count: Yea not gonna let you choose this either, its 8 because this touchscreen is inaccurate')
+    p_min, default = 3, 4
     while True:
         p_str = 8
         if not p_str:
