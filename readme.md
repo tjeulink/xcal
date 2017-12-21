@@ -1,10 +1,34 @@
-What this?
-==========
+What this? ~~Probably~~ unstable!
+=================================
 
-This is an alternative to _xinput_calibrator_ (as seen on
+This is an alternative to an alternative of _xinput_calibrator_ called _xcal_.
+
+xcal:
+[github](https://github.com/reinderien/xcal)
+
+xinput_calibrator:
 [github](https://github.com/tias/xinput_calibrator),
 [FreeDesktop](https://www.freedesktop.org/wiki/Software/xinput_calibrator/),
 [Ubuntu](https://packages.ubuntu.com/zesty/xinput-calibrator), etc.).
+
+Why was this forked from master?:
+
+I forked it for a very very specific use, to simplify calibration for the KeDei touchscreen i have for my raspberry pi. 
+
+
+Which speciffic touchscreen is this calibrated for?:
+
+This was adapted for the KeDei Raspberry pi Display 3.5 inch HDMILCD 18bit version 1.1 2017/9/9 with a resolution of 480 by 320. It will probably work with other resolutions too but not sure. The touchscreen chipset i tested this on is the XPT2046
+
+
+Whats different from the master?:
+
+The original xcal is designed for versitility(i assume), this one is adapted for the slightly braindead like me trying to calibrate this specific touchscreen with ease. The biggest difference between master and this is that the master was written by someone who knew what they where doing, this fork was not.
+
+
+Everything below this is untouched from master, it may or may not be correct so pull conclusions at own caution.
+================================================================================================================
+
 
 Similarities:
 - For Unix-like OS
